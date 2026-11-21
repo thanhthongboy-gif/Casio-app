@@ -3,188 +3,139 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Casio Master 580</title>
+<title>Sổ tay Toán THPTQG</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script>
 window.MathJax = { tex: { inlineMath: [['\\(', '\\)']] }, svg: { fontCache: 'global' }, startup: { typeset: false } };
 </script>
-<script async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"></script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js" onerror="var m=document.createElement('script');m.async=true;m.src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.js';document.head.appendChild(m)"></script>
 <style>
-/* ===== [SỬA 1] Tone Trắng - Xanh dương (bỏ dark mode) ===== */
-:root{
-  --bg:#f4f8ff; --surface:#ffffff; --surface2:#eaf2ff; --text:#0f1b2d; --muted:#4f5f78; --line:#d3e2fb;
-  --accent:#1f6feb; --accent-d:#1553b8; --accent-soft:#e3eeff;
-  --k-bg:#f7f9fc; --k-line:#c3d0e6; --k-text:#1c2a40;
-  --k-shift:#fff1cf; --k-shift-t:#7a5410; --k-alpha:#fde2e2; --k-alpha-t:#8a2b2b; --k-menu:#dbe9ff; --k-menu-t:#17428a;
-  --shadow:0 1px 2px rgba(31,111,235,.08),0 6px 18px rgba(31,111,235,.07);
-  color-scheme:light;
-}
+:root{--bg:#F8FAFC;--card:#FFFFFF;--text:#0F172A;--muted:#64748B;--line:#E2E8F0;--accent:#1D4ED8;--accent-bg:#EFF6FF;
+ --k-bg:#F1F5F9;--k-line:#CBD5E1;--k-text:#0F172A;--k-shift:#FEF3C7;--k-shift-t:#92400E;--k-alpha:#FEE2E2;--k-alpha-t:#991B1B;--k-menu:#DBEAFE;--k-menu-t:#1E40AF;color-scheme:light}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html{height:100%;scroll-padding-top:110px}
+html{height:100%;scroll-padding-top:72px}
 :root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 body{margin:0;background:var(--bg);color:var(--text);font-family:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;font-size:15px;line-height:1.55;min-height:100%}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--surface);z-index:30}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--card);z-index:30}
 body.lock{overflow:hidden}
+[hidden]{display:none!important}
 .app{max-width:560px;margin:0 auto;padding:0 16px 48px}
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--surface);margin:0 -16px;padding:10px 16px 10px;border-bottom:2px solid var(--accent);box-shadow:var(--shadow)}
-.top{display:flex;align-items:center;gap:10px;margin-bottom:10px}
-.brand{display:flex;align-items:center;gap:10px;flex:1;min-width:0}
-.logo{width:36px;height:36px;flex:none;display:block}
-h1{font-size:17px;margin:0;font-weight:700;letter-spacing:-.01em;color:var(--accent-d);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.bt{min-width:0}
-.sub{font-size:12px;color:var(--muted);margin-top:-2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.icon-btn{width:42px;height:42px;flex:none;border-radius:14px;border:1px solid var(--line);background:var(--accent);color:#fff;display:grid;place-items:center;cursor:pointer;font-size:20px;line-height:1}
-.icon-btn:active{transform:scale(.95)}
-button:focus-visible,input:focus-visible{outline:3px solid var(--accent-soft);outline-offset:1px}
-.search{position:relative}
-.search .si{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--accent);display:grid}
-.search .si .i{width:20px;height:20px}
-.search input{width:100%;height:44px;border-radius:14px;border:1.5px solid var(--line);background:var(--bg);color:var(--text);padding:0 44px;font:inherit;font-size:15px;outline:none}
-.search input:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft);background:#fff}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--card);margin:0 -16px;padding:0 16px;height:54px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+h1{font-size:17px;margin:0;font-weight:700;color:var(--accent);letter-spacing:-.01em}
+button{font-family:inherit}
+button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.icon-btn{width:40px;height:40px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--text);display:grid;place-items:center;cursor:pointer}
+.icon-btn:active{background:var(--accent-bg)}
+.i{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.search{position:relative;margin:14px 0 10px}
+.search .si{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--muted);display:grid}
+.search .si .i{width:19px;height:19px}
+.search input{width:100%;height:44px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--text);padding:0 42px;font:inherit;font-size:15px;outline:none}
+.search input:focus{border-color:var(--accent)}
 .search input::placeholder{color:var(--muted)}
-.clear{position:absolute;right:8px;top:50%;transform:translateY(-50%);width:32px;height:32px;border:0;border-radius:10px;background:var(--surface2);color:var(--accent-d);cursor:pointer;display:none;font-size:16px}
-.count{font-size:12.5px;color:var(--muted);margin:12px 2px 10px}
-.list{display:flex;flex-direction:column;gap:10px}
-.card{background:var(--surface);border:1.5px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+.clear{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:32px;height:32px;border:0;border-radius:8px;background:none;color:var(--muted);cursor:pointer;display:none;place-items:center}
+.clear .i{width:18px;height:18px}
+.chips{display:flex;flex-wrap:nowrap;gap:6px;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:0 16px 2px;-webkit-overflow-scrolling:touch}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;white-space:nowrap;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:8px;padding:7px 12px;font-size:13px;line-height:1.3;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.count{font-size:12.5px;color:var(--muted);margin:14px 2px 8px}
+.list{display:flex;flex-direction:column;gap:8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
 .card.open{border-color:var(--accent)}
-.head{width:100%;display:flex;align-items:center;gap:12px;padding:14px;border:0;background:none;color:inherit;font:inherit;text-align:left;cursor:pointer}
-.ico{flex:none;width:44px;height:44px;border-radius:14px;background:var(--accent-soft);display:grid;place-items:center;font-size:21px;color:var(--accent-d);font-weight:700}
-.ht{flex:1;min-width:0}
+.head{width:100%;display:flex;align-items:center;gap:12px;padding:12px;border:0;background:none;color:inherit;font:inherit;text-align:left;cursor:pointer}
+.ico{flex:none;width:38px;height:38px;border-radius:9px;background:var(--accent-bg);color:var(--accent);display:grid;place-items:center;font-weight:700}
+.ico .i{width:21px;height:21px}
+.ht{flex:1;min-width:0;overflow-wrap:anywhere}
 .ht b{display:block;font-size:15px;font-weight:600;line-height:1.3}
 .ht span{display:block;font-size:13px;color:var(--muted);margin-top:2px}
-.chev{flex:none;color:var(--accent);transition:transform .25s}
-.card.open .chev{transform:rotate(180deg)}
-.body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s ease}
+.chev{flex:none;color:var(--muted);transition:transform .2s;width:20px;height:20px}
+.card.open .chev{transform:rotate(180deg);color:var(--accent)}
+.body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .25s ease}
 .card.open .body{grid-template-rows:1fr}
-.inner{overflow:hidden}
-.pad{padding:2px 16px 16px}
-.prob{background:var(--surface2);border-radius:14px;padding:10px 12px;font-size:14px;margin-bottom:12px;overflow-x:auto}
-.fm{background:var(--bg);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:8px 12px;margin-bottom:8px;overflow-x:auto;font-size:14px}
+.inner{overflow:hidden;min-height:0}
+.pad{padding:0 12px 12px}
+.blk{border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin-top:8px;font-size:14px;overflow-x:auto}
+.blk>b{display:block;font-size:11.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.blk.trap{border-left:3px solid var(--text)}
+.blk.note{background:var(--bg)}
+.prob{margin-bottom:8px}
+.fm{padding:7px 0;border-top:1px solid var(--line);overflow-x:auto}
+.fm:first-of-type{border-top:0;padding-top:0}
 .fm small{display:block;font-size:12.5px;color:var(--muted);margin-bottom:2px}
-.steps{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-direction:column;gap:10px}
+.steps{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:8px}
 .steps li{display:flex;gap:10px;align-items:flex-start}
-.n{flex:none;width:24px;height:24px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-size:12px;font-weight:700;display:grid;place-items:center;margin-top:2px}
-.st{flex:1;min-width:0;line-height:2.05}
-kbd{display:inline-block;font:600 12.5px/1 'Be Vietnam Pro',system-ui,sans-serif;background:var(--k-bg);color:var(--k-text);border:1px solid var(--k-line);border-bottom-width:3px;border-radius:8px;padding:5px 8px 4px;margin:0 1px;white-space:nowrap}
+.n{flex:none;width:22px;height:22px;border-radius:6px;background:var(--accent-bg);color:var(--accent);font-size:12px;font-weight:700;display:grid;place-items:center;margin-top:3px}
+.st{flex:1;min-width:0;line-height:2}
+kbd{display:inline-block;font:600 12.5px/1 'Be Vietnam Pro',system-ui,sans-serif;background:var(--k-bg);color:var(--k-text);border:1px solid var(--k-line);border-bottom-width:3px;border-radius:7px;padding:5px 8px 4px;margin:0 1px;white-space:nowrap}
 kbd.shift{background:var(--k-shift);color:var(--k-shift-t);border-color:var(--k-shift-t)}
 kbd.alpha{background:var(--k-alpha);color:var(--k-alpha-t);border-color:var(--k-alpha-t)}
 kbd.menu{background:var(--k-menu);color:var(--k-menu-t);border-color:var(--k-menu-t)}
-.tip{margin-top:14px;border-radius:14px;padding:10px 12px;font-size:13.5px;background:var(--accent-soft);color:var(--text)}
-.tip b{color:var(--accent-d)}
+.tip{margin-top:12px;border-radius:8px;padding:10px 12px;font-size:13.5px;background:var(--accent-bg)}
+.tip b{color:var(--accent)}
 .empty{text-align:center;color:var(--muted);padding:48px 16px}
-.empty big{display:block;font-size:34px;margin-bottom:6px}
+.empty big{display:block;margin-bottom:6px}
+.empty big .i{width:36px;height:36px}
 footer{margin-top:22px;text-align:center;font-size:12px;color:var(--muted)}
 mjx-container{font-size:105%!important}
-.fm{-webkit-overflow-scrolling:touch}
-.ht b,.ht span{overflow-wrap:anywhere}
-@media (max-width:380px){.app{padding:0 12px 40px}header{margin:0 -12px;padding:10px 12px 8px}.fm,.prob{font-size:13px}mjx-container{font-size:98%!important}}
-
-/* ===== [THÊM] Tập bấm ===== */
-[hidden]{display:none!important}
-.pr{display:flex;flex-direction:column;gap:12px}
-.pbar{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--surface);border:1.5px solid var(--line);border-radius:16px;padding:10px 14px}
+.fm mjx-container,.blk mjx-container{max-width:100%}
+/* Tập bấm */
+.pr{display:flex;flex-direction:column;gap:10px}
+.pb2{display:flex;gap:6px}
+.pbar{flex-wrap:wrap;display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
 .pbar small{display:block;font-size:12px;color:var(--muted)}
-.pbar b{color:var(--accent-d);font-size:15px}
-.rand{width:100%;border:0;border-radius:16px;background:var(--accent);color:#fff;font:inherit;font-weight:700;font-size:16px;padding:14px;cursor:pointer;box-shadow:0 6px 16px rgba(31,111,235,.28)}
-.rand:active{transform:scale(.98)}
-.ghost{border:1.5px solid var(--accent);background:#fff;color:var(--accent-d);border-radius:12px;font:inherit;font-weight:600;font-size:13.5px;padding:9px 12px;cursor:pointer}
-.ghost:active{background:var(--accent-soft)}
-.pcard{background:var(--surface);border:1.5px solid var(--accent);border-radius:18px;box-shadow:var(--shadow);padding:16px}
+.pbar b{color:var(--accent);font-size:15px}
+.rand{width:100%;border:0;border-radius:10px;background:var(--accent);color:#fff;font-weight:700;font-size:15px;padding:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px}
+.rand:active{opacity:.9}
+.ghost{border:1px solid var(--accent);background:var(--card);color:var(--accent);border-radius:8px;font-weight:600;font-size:13.5px;padding:9px 12px;cursor:pointer}
+.ghost:active{background:var(--accent-bg)}
+.pcard{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px}
 .pcard small{font-size:12.5px;color:var(--muted)}
-.qt{font-size:16px;line-height:1.8;margin:6px 0 14px;overflow-x:auto}
+.qt{font-size:16px;line-height:1.8;margin:6px 0 12px;overflow-x:auto}
 .acts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.pa{margin-top:12px;background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:12px;padding:10px 12px;font-weight:600;overflow-x:auto}
-.ps{margin-top:14px}
-/* ===== [THÊM 2] Drawer (menu 3 gạch) ===== */
-.scrim{position:fixed;inset:0;background:rgba(15,27,45,.45);opacity:0;pointer-events:none;transition:opacity .25s;z-index:40}
-.drawer{position:fixed;top:0;bottom:0;left:0;width:min(84vw,320px);background:var(--surface);z-index:50;transform:translateX(-102%);transition:transform .28s ease;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);box-shadow:6px 0 24px rgba(15,27,45,.18)}
+.pa{margin-top:10px;background:var(--accent-bg);border-left:3px solid var(--accent);border-radius:8px;padding:10px 12px;font-weight:600;overflow-x:auto}
+.ps{margin-top:12px}
+.keys{white-space:nowrap}
+.tx{margin:0 .25em}
+/* Mục lục (drawer bên phải) */
+.scrim{position:fixed;inset:0;background:rgba(15,23,42,.4);opacity:0;pointer-events:none;transition:opacity .2s;z-index:40}
+.drawer{position:fixed;top:0;bottom:0;right:0;width:min(86vw,330px);background:var(--card);z-index:50;transform:translateX(102%);transition:transform .25s ease;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);border-left:1px solid var(--line)}
 body.dopen .scrim{opacity:1;pointer-events:auto}
 body.dopen .drawer{transform:none}
-.dh{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;background:var(--accent);color:#fff;font-weight:700}
-.dx{width:38px;height:38px;border:0;border-radius:12px;background:rgba(255,255,255,.2);color:#fff;font-size:18px;cursor:pointer}
-.dn{flex:1;overflow-y:auto;padding:8px 12px calc(16px + env(safe-area-inset-bottom,0px))}
-.dn h3{font-size:12.5px;color:var(--muted);margin:14px 6px 6px;font-weight:600}
-.di{display:flex;align-items:center;gap:10px;width:100%;border:0;background:none;color:var(--text);font:inherit;font-size:14.5px;text-align:left;padding:11px 10px;border-radius:12px;cursor:pointer}
-.di:active,.di.on{background:var(--accent-soft);color:var(--accent-d);font-weight:600}
-
-/* ===== [THÊM 4] Splash ===== */
-.splash{position:fixed;inset:0;z-index:100;background:radial-gradient(120% 60% at 50% 0%,#dcebff 0%,rgba(220,235,255,0) 70%),linear-gradient(180deg,#ffffff 0%,#f0f6ff 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:24px;transition:opacity .5s,visibility .5s}
-.splash.hide{opacity:0;visibility:hidden}
-.splash .logo{width:96px;height:96px;filter:drop-shadow(0 12px 22px rgba(31,111,235,.32))}
-.splash h2{margin:0;font-size:28px;color:var(--accent-d);letter-spacing:-.02em}
-.splash p{margin:0;color:var(--muted);max-width:280px}
-.go{margin-top:10px;border:0;border-radius:16px;background:var(--accent);color:#fff;font:inherit;font-weight:700;font-size:16px;padding:14px 38px;cursor:pointer;box-shadow:0 8px 20px rgba(31,111,235,.3)}
-.go:active{transform:scale(.97)}
-.bar{width:140px;height:4px;border-radius:4px;background:var(--line);overflow:hidden}
-.bar i{display:block;height:100%;width:0;background:var(--accent);animation:fill 3.2s linear forwards}
-@keyframes fill{to{width:100%}}
-/* ===== [THÊM] Hệ thống icon SVG ===== */
-.i{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.clear{place-items:center}.clear .i{width:18px;height:18px}
-.dx{display:grid;place-items:center}
-.rand{display:flex;align-items:center;justify-content:center;gap:8px}
-.dn h3{display:flex;align-items:center;gap:8px}.dn h3 .i{width:18px;height:18px;color:var(--accent)}
-.di>.i:first-child{color:var(--accent)}.di .go2{margin-left:auto;width:18px;height:18px;color:var(--muted)}
-.empty big .i{width:40px;height:40px;color:var(--accent)}
-/* Splash tinh chỉnh */
-.splash h2{font-size:30px;margin-top:6px}
-.splash p{text-wrap:balance;max-width:300px}
-.go{display:inline-flex;align-items:center;gap:8px}.go .i{width:20px;height:20px}
-.splash>*{animation:rise .6s cubic-bezier(.2,.7,.2,1) both}
-.splash>:nth-child(2){animation-delay:.08s}.splash>:nth-child(3){animation-delay:.16s}.splash>:nth-child(4){animation-delay:.24s}.splash>:nth-child(5){animation-delay:.32s}
-@keyframes rise{from{opacity:0;transform:translateY(12px) scale(.96)}}
-@media (prefers-reduced-motion:reduce){.body,.chev,.drawer,.scrim,.splash{transition:none}.bar i{animation:none;width:100%}.splash>*{animation:none}}
+.dh{display:flex;align-items:center;justify-content:space-between;padding:0 16px;height:54px;border-bottom:1px solid var(--line);font-weight:700;color:var(--accent)}
+.dx{width:38px;height:38px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--text);display:grid;place-items:center;cursor:pointer}
+.dn{flex:1;overflow-y:auto;padding:4px 12px calc(16px + env(safe-area-inset-bottom,0px))}
+.dn h2{font-size:13px;font-weight:700;color:var(--accent);margin:14px 6px 0;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.dn h3{font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin:16px 6px 4px;font-weight:700}
+.di{display:flex;align-items:center;gap:8px;width:100%;border:0;background:none;color:var(--text);font-size:14.5px;text-align:left;padding:10px;border-radius:8px;cursor:pointer}
+.di.on{background:var(--accent-bg);color:var(--accent);font-weight:600}
+.di .go2{margin-left:auto;width:17px;height:17px;color:var(--muted)}
+@media (max-width:380px){.chips{margin:0 -12px;padding:0 12px 2px}.app{padding:0 12px 40px}header{margin:0 -12px;padding:0 12px}.blk,.fm{font-size:13px}mjx-container{font-size:98%!important}}
+@media (prefers-reduced-motion:reduce){.body,.chev,.drawer,.scrim{transition:none}}
 </style>
 </head>
 <body>
-<!-- [THÊM] Logo SVG dùng chung (header + splash) -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-  <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5aa6ff"/><stop offset="1" stop-color="#1553b8"/></linearGradient></defs>
-  <symbol id="logo" viewBox="0 0 64 64">
-    <rect width="64" height="64" rx="18" fill="url(#lg)"/>
-    <rect x=".75" y=".75" width="62.5" height="62.5" rx="17.25" fill="none" stroke="#fff" stroke-opacity=".4" stroke-width="1.5"/>
-    <rect x="12" y="11" width="40" height="20" rx="6" fill="#fff"/>
-    <text x="32" y="21.2" text-anchor="middle" dominant-baseline="central" font-family="'Be Vietnam Pro',system-ui,sans-serif" font-weight="700" font-size="15" letter-spacing="-.3" fill="#1553b8">580</text>
-    <g fill="#fff"><circle cx="20" cy="40.5" r="3.2"/><circle cx="32" cy="40.5" r="3.2"/><circle cx="44" cy="40.5" r="3.2" fill-opacity=".55"/><circle cx="20" cy="50.5" r="3.2" fill-opacity=".55"/><circle cx="32" cy="50.5" r="3.2" fill-opacity=".55"/><rect x="39.8" y="47.3" width="8.4" height="6.4" rx="3.2"/></g>
-  </symbol>
-</svg>
-
-<!-- [THÊM 4] Splash -->
-<div class="splash" id="splash">
-  <svg class="logo" viewBox="0 0 64 64" role="img" aria-label="Casio Master 580"><use href="#logo"/></svg>
-  <h2>Casio Master 580</h2>
-  <p>Mẹo bấm máy và công thức toán&nbsp;THPT</p>
-  <button class="go" id="go" data-ia="arrow"><span>Vào ngay</span></button>
-  <div class="bar"><i></i></div>
-</div>
-
-<!-- [THÊM 2] Drawer -->
 <div class="scrim" id="scrim"></div>
-<aside class="drawer" id="drawer" aria-label="Menu điều hướng">
-  <div class="dh"><span>Danh mục</span><button class="dx" id="dx" aria-label="Đóng menu" data-i="x"></button></div>
+<aside class="drawer" id="drawer" aria-label="Mục lục">
+  <div class="dh"><span>Mục lục</span><button class="dx" id="dx" aria-label="Đóng mục lục" data-i="x"></button></div>
   <nav class="dn" id="dn"></nav>
 </aside>
-
 <div class="app">
   <header>
-    <div class="top">
-      <button class="icon-btn" id="burger" aria-label="Mở menu" data-i="menu"></button>
-      <div class="brand">
-        <svg class="logo" viewBox="0 0 64 64" role="img" aria-label="Casio Master 580"><use href="#logo"/></svg>
-        <div class="bt"><h1>Casio Master 580</h1><div class="sub">Mẹo bấm máy &amp; lý thuyết THPT</div></div>
-      </div>
-    </div>
-    <div class="search">
-      <span class="si" data-i="search"></span>
-      <input id="q" type="search" placeholder="Tìm: bậc 3, đạo hàm, thể tích…" autocomplete="off" enterkeyhint="search">
-      <button class="clear" id="clear" aria-label="Xóa tìm kiếm" data-i="x"></button>
-    </div>
+    <h1>Sổ tay Toán THPTQG</h1>
+    <button class="icon-btn" id="burger" aria-label="Mở mục lục" data-i="menu"></button>
   </header>
+  <div class="search">
+    <span class="si" data-i="search"></span>
+    <input id="q" type="search" placeholder="Tìm công thức, chuyên đề…" autocomplete="off" enterkeyhint="search">
+    <button class="clear" id="clear" aria-label="Xóa tìm kiếm" data-i="x"></button>
+  </div>
+  <div class="chips" id="chips"></div>
   <div class="count" id="count"></div>
   <main class="list" id="list"></main>
-  <footer>Phím <kbd class="shift">SHIFT</kbd> <kbd class="alpha">ALPHA</kbd> <kbd class="menu">MENU</kbd> được tô màu như trên máy.<br>Menu có thể khác nhẹ tùy phiên bản fx-580VN X.</footer>
+  <footer>Phím <kbd class="shift">SHIFT</kbd> <kbd class="alpha">ALPHA</kbd> <kbd class="menu">MENU</kbd> tô màu như trên máy. Menu có thể khác nhẹ tùy phiên bản fx-580VN X.</footer>
 </div>
 
 <script>
@@ -288,7 +239,7 @@ const THEORY = [
   f:[['','\\sin\\varphi=\\dfrac{|\\vec n\\cdot\\vec u|}{|\\vec n|\\,|\\vec u|}'],['','=\\dfrac{|Aa+Bb+Cc|}{\\sqrt{A^2+B^2+C^2}\\cdot\\sqrt{a^2+b^2+c^2}}']]},
  /* ---- Ảnh 4: Khối đa diện, thể tích, tỉ số thể tích ---- */
  {cat:'Thể tích',ico:'🧊',title:'Công thức thể tích các khối',sub:'Chóp, lăng trụ, hộp, lập phương',tags:'the tich khoi chop lang tru hop chu nhat lap phuong da dien',
-  f:[['Khối chóp','V=\\dfrac13\\,h\\,S_{\\text{đáy}}'],['Khối lăng trụ','V=h\\,S'],['Hộp chữ nhật','V=abc'],['Lập phương cạnh \\(a\\)','V=a^3,\\quad A\'C=a\\sqrt3']]},
+  f:[['Khối chóp (\\(S\\): diện tích đáy)','V=\\dfrac13\\,h\\,S'],['Khối lăng trụ','V=h\\,S'],['Hộp chữ nhật','V=abc'],['Lập phương cạnh \\(a\\)','V=a^3,\\quad A\'C=a\\sqrt3']]},
  {cat:'Thể tích',ico:'🔺',title:'Tỉ số thể tích',sub:'Chóp tam giác, lăng trụ, hộp, chóp tứ giác',tags:'ti so the tich chop lang tru hop da dien',
   f:[['Chóp tam giác','\\dfrac{V_{S.A\'B\'C\'}}{V_{S.ABC}}=\\dfrac{SA\'}{SA}\\cdot\\dfrac{SB\'}{SB}\\cdot\\dfrac{SC\'}{SC}'],
      ['Lăng trụ','\\dfrac{V_{A\'B\'C\'.MNP}}{V_{A\'B\'C\'.ABC}}=\\dfrac13\\left(\\dfrac{A\'M}{AA\'}+\\dfrac{B\'N}{BB\'}+\\dfrac{C\'P}{CC\'}\\right)'],
@@ -390,7 +341,75 @@ const THEORY = [
   f:[['','\\cos a\\cos b=\\dfrac12\\left[\\cos(a-b)+\\cos(a+b)\\right]'],['','\\sin a\\sin b=\\dfrac12\\left[\\cos(a-b)-\\cos(a+b)\\right]'],['','\\sin a\\cos b=\\dfrac12\\left[\\sin(a+b)+\\sin(a-b)\\right]'],['','\\cos a\\sin b=\\dfrac12\\left[\\sin(a+b)-\\sin(a-b)\\right]']]},
  {cat:'Lượng giác',ico:'🎯',title:'Phương trình lượng giác cơ bản',sub:'sin, cos, tan, cot (\\(k\\in\\mathbb Z\\))',tags:'phuong trinh luong giac co ban sin cos tan cot nghiem',
   f:[['\\(\\sin x=\\sin\\alpha\\)','x=\\alpha+k2\\pi\\ \\text{hoặc}\\ x=\\pi-\\alpha+k2\\pi'],['\\(\\cos x=\\cos\\alpha\\)','x=\\pm\\alpha+k2\\pi'],['\\(\\tan x=\\tan\\alpha\\)','x=\\alpha+k\\pi\\quad(\\cos x\\ne0)'],['\\(\\cot x=\\cot\\alpha\\)','x=\\alpha+k\\pi\\quad(\\sin x\\ne0)']],
-  tip:'\\(\\sin x=m\\) và \\(\\cos x=m\\) vô nghiệm khi \\(|m|>1\\). Tìm góc \\(\\alpha\\) bằng [SHIFT][sin], [SHIFT][cos], [SHIFT][tan] (đặt Radian).'}
+  tip:'\\(\\sin x=m\\) và \\(\\cos x=m\\) vô nghiệm khi \\(|m|>1\\). Tìm góc \\(\\alpha\\) bằng [SHIFT][sin], [SHIFT][cos], [SHIFT][tan] (đặt Radian).'},
+ /* ---- LỚP 10 ---- */
+ {grp:'Lớp 10',cat:'Tổ hợp - Xác suất cổ điển',ico:'➕',title:'Quy tắc cộng, quy tắc nhân',sub:`Chọn phương án hay làm liên tiếp các bước`,tags:'quy tac cong nhan dem',
+  f:[[`Quy tắc cộng: làm bằng phương án 1 (\\(m\\) cách) hoặc phương án 2 (\\(n\\) cách)`,`N=m+n`],[`Quy tắc nhân: làm liên tiếp bước 1 (\\(m\\) cách) rồi bước 2 (\\(n\\) cách)`,`N=m\\cdot n`]],
+  trap:`Nhầm "hoặc" (cộng) với "và, liên tiếp" (nhân). Nếu các phương án có phần chung thì phải trừ phần trùng.`,
+  tip:`Ví dụ: 3 áo, 4 quần. Chọn 1 bộ gồm 1 áo và 1 quần: \\(3\\cdot4=12\\) cách (nhân). Chọn 1 món là áo hoặc quần: \\(3+4=7\\) cách (cộng).`},
+ {grp:'Lớp 10',cat:'Tổ hợp - Xác suất cổ điển',ico:'🔢',title:'Hoán vị, chỉnh hợp, tổ hợp',sub:`\\(P_n\\), \\(A_n^k\\), \\(C_n^k\\)`,tags:'hoan vi chinh hop to hop giai thua',
+  f:[[`Hoán vị \\(n\\) phần tử`,`P_n=n!`],[`Chỉnh hợp chập \\(k\\) của \\(n\\) (có thứ tự)`,`A_n^k=\\dfrac{n!}{(n-k)!}`],[`Tổ hợp chập \\(k\\) của \\(n\\) (không thứ tự)`,`C_n^k=\\dfrac{n!}{k!\\,(n-k)!}`],[`Liên hệ`,`C_n^k=C_n^{n-k},\\quad A_n^k=k!\\,C_n^k`]],
+  trap:`Chọn nhóm không phân biệt vai trò thì dùng \\(C\\); có phân biệt thứ tự hoặc chức vụ thì dùng \\(A\\).`,
+  tip:`Trên máy: [SHIFT][÷] là nCr, [SHIFT][×] là nPr, [x!] là giai thừa. Quy ước \\(0!=1\\).`},
+ {grp:'Lớp 10',cat:'Tổ hợp - Xác suất cổ điển',ico:'🎲',title:'Xác suất cổ điển',sub:`\\(\\Omega\\), biến cố \\(A\\), \\(P(A)\\)`,tags:'xac suat co dien khong gian mau bien co',
+  f:[[`\\(n(\\Omega)\\): số phần tử không gian mẫu; \\(n(A)\\): số kết quả thuận lợi cho \\(A\\)`,`P(A)=\\dfrac{n(A)}{n(\\Omega)}`],[``,`0\\le P(A)\\le1`],[`Biến cố đối`,`P(\\bar A)=1-P(A)`]],
+  steps:[`Xác định phép thử và đếm \\(n(\\Omega)\\).`,`Đếm số kết quả thuận lợi \\(n(A)\\).`,`Lập tỉ số \\(\\dfrac{n(A)}{n(\\Omega)}\\).`],
+  trap:`Đếm \\(n(\\Omega)\\) và \\(n(A)\\) phải cùng một cách (cùng có thứ tự hoặc cùng không thứ tự).`,
+  tip:`Bấm thẳng dạng phân số, ví dụ \\(\\dfrac{C_6^3}{C_{10}^3}\\), máy ra \\(\\dfrac16\\).`},
+ {grp:'Lớp 10',cat:'Tổ hợp - Xác suất cổ điển',ico:'🎲',title:'Biến cố đối: bài "ít nhất", "không có"',sub:`Dùng phần bù để đếm gọn`,tags:'bien co doi phan bu it nhat khong co',
+  f:[[`Công thức phần bù`,`P(A)=1-P(\\bar A)`]],
+  steps:[`Gọi \\(A\\): "có ít nhất ...", thì \\(\\bar A\\): "không có ...".`,`Tính \\(P(\\bar A)\\) (thường dễ đếm hơn).`,`Kết luận \\(P(A)=1-P(\\bar A)\\).`],
+  trap:`Phủ định của "ít nhất 1" là "không có", không phải "nhiều nhất 1".`,
+  tip:`Dùng phần bù khi đề có cụm "ít nhất" hoặc "không có".`},
+ {grp:'Lớp 10',cat:'Đếm số',ico:'🔢',title:'Lập số tự nhiên: ưu tiên điều kiện chặt',sub:`Chữ số đầu khác 0, tận cùng, lặp hay không lặp`,tags:'lap so tu nhien chu so dau khac 0 tan cung chan le chia het 5 doi mot khac nhau lap',
+  f:[[`Số có \\(n\\) chữ số`,`\\overline{a_1a_2\\ldots a_n},\\ a_1\\ne0`],[`Cho phép lặp chữ số`,`9\\cdot10^{n-1}`]],
+  steps:[`Xử lý ô bị ràng buộc chặt trước: chữ số đầu khác \\(0\\), chữ số tận cùng chẵn, lẻ hoặc chia hết cho \\(5\\).`,`Xếp các ô còn lại bằng chỉnh hợp hoặc quy tắc nhân.`,`Nhân các kết quả (cộng nếu đã tách trường hợp).`],
+  trap:`Phân biệt "đôi một khác nhau" (không lặp, dùng \\(A\\) hoặc nhân số cách giảm dần) với "được phép lặp" (mỗi ô độc lập, nhân thẳng).`,
+  tip:`Chia hết cho \\(5\\): tận cùng \\(0\\) hoặc \\(5\\). Số chẵn: tận cùng \\(0,2,4,6,8\\).`},
+ {grp:'Lớp 10',cat:'Đếm số',ico:'🔢',title:'Tách trường hợp khi có chữ số 0',sub:`Chữ số 0 ở tập điều kiện tận cùng`,tags:'tach truong hop chu so 0 so chan khac nhau',
+  f:[[`Ví dụ: số chẵn có 4 chữ số khác nhau lập từ \\(\\{0,1,\\dots,9\\}\\)`,`A_9^3+4\\cdot8\\cdot A_8^2=504+1792=2296`]],
+  steps:[`TH1: chữ số tận cùng là \\(0\\).`,`TH2: tận cùng khác \\(0\\): chữ số đầu phải khác \\(0\\) và khác chữ số cuối, rồi xếp các ô giữa.`,`Cộng hai trường hợp.`],
+  trap:`Gộp chung hai trường hợp dễ đếm thừa các số bắt đầu bằng \\(0\\).`,
+  tip:`Kiểm tra bằng đếm bù: \\(5\\cdot A_9^3-4\\cdot A_8^2=2520-224=2296\\).`},
+ {grp:'Lớp 10',cat:'Đếm dạng hình',ico:'📊',title:'Xếp chỗ, điền ô',sub:`Buộc nhóm, nhóm không kề nhau`,tags:'xep cho dien o buoc nhom khong ke nhau hoan vi',
+  f:[[`Buộc \\(k\\) người kề nhau (trong \\(n\\) người)`,`(n-k+1)!\\cdot k!`],[`\\(k\\) người đôi một không kề nhau`,`(n-k)!\\cdot A_{n-k+1}^{k}`]],
+  steps:[`Kẻ ô trống đại diện từng vị trí.`,`Xếp người hoặc vật có vị trí cố định trước.`,`Buộc nhóm đứng cạnh nhau: coi cả nhóm là 1 khối, rồi nhân hoán vị nội bộ trong khối.`,`Nhóm không kề nhau: xếp các phần tử còn lại trước, rồi chèn nhóm vào các khe trống.`],
+  trap:`Quên nhân hoán vị nội bộ của khối; hoặc quên rằng \\(n-k\\) người còn lại tạo ra \\(n-k+1\\) khe.`,
+  tip:`Bàn tròn \\(n\\) người: cố định một người, xếp \\((n-1)!\\) cách.`},
+ {grp:'Lớp 10',cat:'Đếm dạng hình',ico:'📐',title:'Hình học tổ hợp',sub:`Đoạn thẳng, đường chéo, tam giác, đường đi`,tags:'hinh hoc to hop doan thang duong cheo tam giac duong di ngan nhat luoi o vuong',
+  f:[[`Số đoạn thẳng nối \\(n\\) điểm phân biệt`,`C_n^2`],[`Số đường chéo của đa giác lồi \\(n\\) cạnh`,`C_n^2-n`],[`Số tam giác từ \\(n\\) điểm (không có 3 điểm thẳng hàng)`,`C_n^3`],[`Có \\(k\\) điểm thẳng hàng`,`C_n^3-C_k^3`],[`Đường đi ngắn nhất trên lưới \\(m\\times n\\) ô vuông`,`C_{m+n}^{m}`]],
+  trap:`Quên trừ các bộ ba điểm thẳng hàng khi đếm tam giác.`,
+  tip:`Đường đi ngắn nhất chỉ đi sang phải và lên trên: chọn \\(m\\) vị trí đi ngang trong \\(m+n\\) bước.`},
+ {grp:'Lớp 10',cat:'Miền nghiệm BPT',ico:'▱',title:'BPT bậc nhất hai ẩn',sub:`\\(ax+by\\le c\\) (hoặc \\(<,\\ \\ge,\\ >\\))`,tags:'mien nghiem bat phuong trinh bac nhat hai an nua mat phang diem thu bo',
+  f:[[`Dạng BPT`,`ax+by\\le c`],[`Đường thẳng bờ`,`d:\\ ax+by=c`],[`Thử điểm \\(O(0;0)\\)`,`a\\cdot0+b\\cdot0\\le c\\ \\Leftrightarrow\\ 0\\le c`]],
+  steps:[`Vẽ đường thẳng bờ \\(ax+by=c\\): nét liền nếu BPT có dấu "=" (\\(\\le,\\ge\\)), nét đứt nếu không có (\\(<,>\\)).`,`Chọn điểm thử, ưu tiên \\(O(0;0)\\) nếu \\(O\\) không nằm trên bờ.`,`Thay vào BPT: đúng thì miền nghiệm là nửa mặt phẳng chứa điểm thử, sai thì là nửa còn lại.`,`Gạch bỏ phần không thuộc miền nghiệm.`],
+  trap:`Bờ đi qua \\(O\\) (khi \\(c=0\\)) thì không dùng \\(O\\) làm điểm thử, hãy chọn điểm khác như \\((1;0)\\).`,
+  tip:`Hệ BPT: miền nghiệm là phần giao của các nửa mặt phẳng.`},
+ {grp:'Lớp 10',cat:'Miền nghiệm BPT',ico:'📈',title:'BPT bậc hai một ẩn',sub:`\\(ax^2+bx+c\\ge0\\) (hoặc \\(>,\\ \\le,\\ <\\))`,tags:'bat phuong trinh bac hai xet dau tam thuc trong trai ngoai cung delta nghiem kep calc',
+  f:[[`Tam thức \\(f(x)=ax^2+bx+c\\) (\\(a\\ne0\\))`,`\\Delta=b^2-4ac,\\quad\\Delta'=b'^2-ac\\ (b=2b')`],[`\\(\\Delta>0\\): hai nghiệm \\(x_1<x_2\\)`,`f(x)\\text{ cùng dấu }a\\text{ khi }x<x_1\\text{ hoặc }x>x_2;\\ \\text{trái dấu }a\\text{ khi }x_1<x<x_2`],[`\\(\\Delta=0\\): nghiệm kép \\(x_0=-\\dfrac b{2a}\\)`,`f(x)\\text{ cùng dấu }a\\text{ với mọi }x\\ne x_0,\\quad f(x_0)=0`],[`\\(\\Delta<0\\): vô nghiệm`,`f(x)\\text{ cùng dấu }a\\text{ với mọi }x`]],
+  steps:[`Tìm \\(\\Delta\\) (hoặc \\(\\Delta'\\)), nghiệm nếu có, và xét dấu \\(a\\).`,`Xét dấu theo quy tắc "trong trái, ngoài cùng": trong hai nghiệm trái dấu \\(a\\), ngoài hai nghiệm cùng dấu \\(a\\).`,`Chọn các khoảng thỏa dấu của BPT.`],
+  trap:`Dấu \\(\\ge,\\le\\) lấy cả hai nghiệm; dấu \\(>,<\\) bỏ nghiệm. Khi \\(\\Delta=0\\) nhớ xét riêng \\(x=x_0\\) (ví dụ \\(f(x)\\ge0\\) đúng mọi \\(x\\) nếu \\(a>0\\); \\(f(x)>0\\) thì loại \\(x_0\\)).`,
+  tip:`Dùng [CALC]: nhập tam thức, thử một giá trị trong từng khoảng chia bởi nghiệm để biết dấu.`},
+ {grp:'Lớp 10',cat:'Hệ thức lượng & Tọa độ cơ bản',ico:'∠',title:'Định lý côsin, định lý sin',sub:`Tam giác \\(ABC\\): \\(BC=a,\\ CA=b,\\ AB=c\\)`,tags:'dinh ly cosin sin he thuc luong tam giac ban kinh ngoai tiep',
+  f:[[`Định lý côsin`,`a^2=b^2+c^2-2bc\\cos A`],[``,`b^2=c^2+a^2-2ca\\cos B`],[``,`c^2=a^2+b^2-2ab\\cos C`],[`Suy ra`,`\\cos A=\\dfrac{b^2+c^2-a^2}{2bc}`],[`Định lý sin (\\(R\\): bán kính đường tròn ngoại tiếp)`,`\\dfrac a{\\sin A}=\\dfrac b{\\sin B}=\\dfrac c{\\sin C}=2R`]],
+  trap:`Góc \\(A\\) phải là góc đối diện với cạnh \\(a\\). Khi tìm góc bằng sin, góc có thể nhọn hoặc tù (\\(\\sin\\alpha=\\sin(180^\\circ-\\alpha)\\)).`,
+  tip:`Biết 3 cạnh thì tìm góc bằng côsin (không bị nhập nhằng); biết 1 cạnh và 2 góc thì dùng sin.`},
+ {grp:'Lớp 10',cat:'Hệ thức lượng & Tọa độ cơ bản',ico:'📐',title:'Công thức diện tích tam giác',sub:`Cơ bản, sin, bán kính, Heron`,tags:'dien tich tam giac heron nua chu vi',
+  f:[[``,`S=\\dfrac12a\\,h_a`],[``,`S=\\dfrac12ab\\sin C=\\dfrac12bc\\sin A=\\dfrac12ca\\sin B`],[``,`S=\\dfrac{abc}{4R}`],[`Với \\(p=\\dfrac{a+b+c}2\\)`,`S=p\\,r`],[`Công thức Heron`,`S=\\sqrt{p(p-a)(p-b)(p-c)}`]],
+  trap:`\\(p\\) là nửa chu vi, không phải chu vi. \\(r\\) là bán kính đường tròn nội tiếp, \\(R\\) là bán kính đường tròn ngoại tiếp.`,
+  tip:`Biết 3 cạnh: bấm thẳng công thức Heron trên máy. Biết 2 cạnh và góc xen giữa: dùng \\(\\dfrac12ab\\sin C\\).`},
+ {grp:'Lớp 10',cat:'Hệ thức lượng & Tọa độ cơ bản',ico:'📍',title:'Vectơ và tọa độ',sub:`Trung điểm, trọng tâm, tích vô hướng`,tags:'vecto toa do trung diem trong tam tich vo huong goc vuong goc',
+  f:[[`Vectơ và độ dài`,`\\overrightarrow{AB}=(x_B-x_A;\\,y_B-y_A),\\quad AB=\\sqrt{(x_B-x_A)^2+(y_B-y_A)^2}`],[`Trung điểm \\(M\\) của \\(AB\\)`,`M\\left(\\dfrac{x_A+x_B}2;\\ \\dfrac{y_A+y_B}2\\right)`],[`Trọng tâm \\(G\\) của \\(\\triangle ABC\\)`,`G\\left(\\dfrac{x_A+x_B+x_C}3;\\ \\dfrac{y_A+y_B+y_C}3\\right)`],[`Tích vô hướng`,`\\vec u\\cdot\\vec v=x_1x_2+y_1y_2=|\\vec u|\\,|\\vec v|\\cos(\\vec u,\\vec v)`],[`Vuông góc`,`\\vec u\\perp\\vec v\\Leftrightarrow\\vec u\\cdot\\vec v=0`]],
+  trap:`Tọa độ \\(\\overrightarrow{AB}\\) là "điểm cuối trừ điểm đầu", không đảo ngược. Công thức trọng tâm chia cho \\(3\\), trung điểm chia cho \\(2\\).`,
+  tip:`Tìm góc giữa hai vectơ: \\(\\cos(\\vec u,\\vec v)=\\dfrac{x_1x_2+y_1y_2}{|\\vec u|\\,|\\vec v|}\\), rồi bấm [SHIFT][cos].`},
+ {grp:'Lớp 10',cat:'Hệ thức lượng & Tọa độ cơ bản',ico:'📏',title:'Phương trình đường thẳng',sub:`Tham số, tổng quát, khoảng cách`,tags:'phuong trinh duong thang tong quat tham so khoang cach diem vtpt vtcp',
+  f:[[`Tham số: qua \\(M(x_0;y_0)\\), VTCP \\(\\vec u=(u_1;u_2)\\)`,`\\begin{cases}x=x_0+u_1t\\\\y=y_0+u_2t\\end{cases}`],[`Tổng quát: qua \\(M(x_0;y_0)\\), VTPT \\(\\vec n=(a;b)\\)`,`a(x-x_0)+b(y-y_0)=0\\Leftrightarrow ax+by+c=0`],[`Khoảng cách từ \\(M_0(x_0;y_0)\\) đến \\(\\Delta:\\ ax+by+c=0\\)`,`d(M_0,\\Delta)=\\dfrac{|ax_0+by_0+c|}{\\sqrt{a^2+b^2}}`]],
+  trap:`VTPT \\((a;b)\\) và VTCP \\((-b;a)\\) khác nhau, đừng lẫn. Phải đưa phương trình về dạng \\(ax+by+c=0\\) trước khi dùng công thức khoảng cách.`,
+  tip:`Hai đường thẳng vuông góc khi tích vô hướng hai VTPT bằng \\(0\\).`},
+ {grp:'Lớp 10',cat:'Hệ thức lượng & Tọa độ cơ bản',ico:'🎯',title:'Phương trình đường tròn',sub:`Tâm \\(I(a;b)\\), bán kính \\(R\\)`,tags:'phuong trinh duong tron tam ban kinh tiep tuyen',
+  f:[[`Dạng chuẩn: tâm \\(I(a;b)\\), bán kính \\(R\\)`,`(x-a)^2+(y-b)^2=R^2`],[`Dạng khai triển`,`x^2+y^2-2ax-2by+c=0`],[`Khi đó tâm \\(I(a;b)\\) và bán kính`,`R=\\sqrt{a^2+b^2-c}`],[`Điều kiện tồn tại`,`a^2+b^2-c>0`]],
+  trap:`Phải kiểm tra \\(a^2+b^2-c>0\\) thì mới là đường tròn. Hệ số của \\(x\\) là \\(-2a\\), của \\(y\\) là \\(-2b\\): đừng quên chia đôi khi tìm tâm.`,
+  tip:`Tiếp tuyến tại \\(M_0(x_0;y_0)\\) vuông góc với \\(IM_0\\): \\((x_0-a)(x-x_0)+(y_0-b)(y-y_0)=0\\).`}
 ];
 
 /* ===== [THÊM] DỮ LIỆU TẬP BẤM =====
@@ -428,7 +447,7 @@ const PRACTICE = [
  {cat:'Hình học - Thể tích',q:`Tính \\(\\cos\\varphi\\), với \\(\\varphi\\) là góc giữa \\((\\alpha):x+2y+2z-3=0\\) và \\((\\beta):2x-y+2z+1=0\\).`,a:`\\dfrac49`,
   s:[`\\(\\vec n=(1;2;2)\\), \\(\\vec n'=(2;-1;2)\\).`,`\\(\\vec n\\cdot\\vec n'=2-2+4=4\\), \\(|\\vec n|=|\\vec n'|=3\\).`,`\\(\\cos\\varphi=\\dfrac{4}{3\\cdot3}=\\dfrac49\\).`]},
  {cat:'Hình học - Thể tích',q:`Khối chóp có đáy là hình vuông cạnh \\(3\\), chiều cao \\(4\\). Tính thể tích.`,a:`12`,
-  s:[`\\(S_{\\text{đáy}}=3^2=9\\).`,`\\(V=\\dfrac13\\cdot4\\cdot9=12\\).`]},
+  s:[`Diện tích đáy \\(S=3^2=9\\).`,`\\(V=\\dfrac13\\cdot4\\cdot9=12\\).`]},
  {cat:'Hình học - Thể tích',q:`Cho chóp \\(S.ABC\\). Lấy \\(A',B',C'\\) trên \\(SA,SB,SC\\) sao cho \\(SA'=\\frac12SA\\), \\(SB'=\\frac23SB\\), \\(SC'=\\frac12SC\\). Tính \\(\\dfrac{V_{S.A'B'C'}}{V_{S.ABC}}\\).`,a:`\\dfrac16`,
   s:[`Áp dụng \\(\\dfrac{V_{S.A'B'C'}}{V_{S.ABC}}=\\dfrac{SA'}{SA}\\cdot\\dfrac{SB'}{SB}\\cdot\\dfrac{SC'}{SC}\\).`,`\\(=\\dfrac12\\cdot\\dfrac23\\cdot\\dfrac12=\\dfrac16\\).`]},
  /* --- Giới hạn & Tiệm cận --- */
@@ -528,8 +547,24 @@ document.querySelectorAll('[data-i]').forEach(el=>el.insertAdjacentHTML('afterbe
 document.querySelectorAll('[data-ia]').forEach(el=>el.insertAdjacentHTML('beforeend',ic(el.dataset.ia)));
 
 const ALL_CAT = 'Tất cả';
-let tab = 'casio', cat = ALL_CAT;
-
+const chipsEl = $('#chips');
+const GRPS = [['Lớp 10','Lớp 10'],['Lớp 11','Lớp 11'],['Lớp 12','Lớp 12'],['Mở rộng','Công thức mở rộng & Bẫy đề'],['Casio','Mẹo Casio']];
+const esc = t => t.replace(/&/g,'&amp;');
+const G11 = ['Bí kíp Casio L11','Bảng đạo hàm','Lượng giác'];
+const EXT = ['Nguyên hàm mở rộng','Tiệm cận','So sánh cơ số','Công thức nhân ba','Biến đổi tổng','Biến đổi tích','Công thức hạ bậc','Cực trị hàm trùng phương'];
+const TRAPS = {
+ 'Logarit':'Quên điều kiện: cơ số \\(a>0,\\ a\\ne1\\) và biểu thức dưới dấu log phải dương.',
+ 'Phương trình logarit':'Giải xong phải đối chiếu điều kiện \\(f(x)>0\\), \\(g(x)>0\\).',
+ 'Bất phương trình mũ':'Quên đổi chiều bất đẳng thức khi \\(0<a<1\\).',
+ 'Bất phương trình logarit':'Quên điều kiện \\(f(x),g(x)>0\\); quên đổi chiều khi \\(0<a<1\\).',
+ 'Tiệm cận đứng và ngang':'Nghiệm của mẫu cũng là nghiệm của tử thì chưa chắc là tiệm cận đứng.',
+ 'Xét tính đơn điệu':'Hàm nhất biến chỉ đơn điệu trên từng khoảng xác định, không kết luận trên cả \\(\\mathbb R\\).',
+ 'Giá trị lớn nhất, nhỏ nhất':'Chỉ lấy các nghiệm \\(x_i\\) nằm trong đoạn \\([a;b]\\).',
+ 'Phương trình tiếp tuyến':'Phân biệt "tiếp tuyến tại điểm" với "tiếp tuyến đi qua điểm".',
+ 'Số phức cơ bản':'Phần ảo của \\(a+bi\\) là \\(b\\), không phải \\(bi\\).',
+ 'Phương trình lượng giác cơ bản':'Với tan, cot nhớ điều kiện \\(\\cos x\\ne0\\), \\(\\sin x\\ne0\\).',
+ 'Giới hạn của hàm số bằng máy':'CALC số quá lớn có thể sai số; thử thêm một giá trị khác để chắc chắn.'
+};
 function keyClass(t){
   const u = t.toUpperCase();
   if(u==='SHIFT') return 'shift';
@@ -537,42 +572,62 @@ function keyClass(t){
   if(u==='MENU'||u==='OPTN') return 'menu';
   return '';
 }
-const kbd = s => s.replace(/\[([^\]]+)\]/g,(m,t)=>`<kbd class="${keyClass(t)}">${t}</kbd>`);
-const fm = ([l,x]) => `<div class="fm">${l?`<small>${l}</small>`:''}\\(\\displaystyle ${x}\\)</div>`;
+const kbd = t => t.split(/(\\\([\s\S]*?\\\))/).map((p,i)=>i%2 ? p : p.replace(/(?:\[[^\]]+\])+/g,m=>'<span class="keys">'+m.replace(/\[([^\]]+)\]/g,(x,k)=>`<kbd class="${keyClass(k)}">${k}</kbd>`)+'</span>')).join('');
+const ex = t => t.replace(/&/g,'&amp;').replace(/</g,'&lt;');   /* "x_1<x_2" không bị trình duyệt hiểu là thẻ HTML */
+const mix = x => /\\text\{/.test(x)
+  ? x.split(/\\text\{([^}]*)\}/).map((p,i)=>i%2 ? `<span class="tx">${ex(p)}</span>` : (p.replace(/[\\\s]/g,'') ? `\\(${ex(p)}\\)` : '')).join('')
+  : `\\(\\displaystyle ${ex(x)}\\)`;
+const fm = ([l,x]) => `<div class="fm">${l?`<small>${l}</small>`:''}${mix(x)}</div>`;
 
-DATA.forEach((d,i)=>{ d.id='c'+i; d.tab='casio'; });
-THEORY.forEach((d,i)=>{ d.id='t'+i; d.tab='theory'; });
-[...DATA,...THEORY].forEach(d=>{
-  const extra = (d.math||'')+' '+(d.f?d.f.map(x=>x[0]+' '+x[1]).join(' '):'')+' '+(d.steps?d.steps.join(' '):'')+' '+(d.tip||'');
+DATA.forEach((d,i)=>{ d.id='c'+i; d.grp='Casio'; });
+THEORY.forEach((d,i)=>{
+  d.id='t'+i;
+  if(!d.grp) d.grp = EXT.some(p=>d.title.startsWith(p)) ? 'Mở rộng' : (G11.includes(d.cat)||d.title.startsWith('Cấp số cộng, nhân')) ? 'Lớp 11' : 'Lớp 12';
+  if(!d.trap && TRAPS[d.title]) d.trap = TRAPS[d.title];
+});
+const gi = g => GRPS.findIndex(x=>x[0]===g);
+const REF = [...THEORY,...DATA].sort((a,b)=>gi(a.grp)-gi(b.grp));
+REF.forEach(d=>{
+  const extra = (d.math||'')+' '+(d.f?d.f.map(x=>x[0]+' '+x[1]).join(' '):'')+' '+(d.steps?d.steps.join(' '):'')+' '+(d.tip||'')+' '+(d.trap||'');
   d.hay = norm(strip(d.title+' '+d.sub+' '+d.cat+' '+d.tags+' '+extra).replace(/\[|\]/g,' '));
 });
-const items = t => t==='casio' ? DATA : t==='theory' ? THEORY : PRACTICE;
-const TN = {casio:'Bấm máy',theory:'Lý thuyết',practice:'Tập bấm'};
-const catsOf = t => [ALL_CAT,...new Set(items(t).map(d=>d.cat))];
+const em = t => typeof t==='string' ? t.replace(/\\\(([\s\S]*?)\\\)/g,(m,x)=>'\\('+x.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'\\)') : t;
+[...REF,...PRACTICE].forEach(d=>{
+  ['title','sub','math','tip','trap','q','m'].forEach(k=>{ if(d[k]) d[k]=em(d[k]); });
+  if(d.steps) d.steps = d.steps.map(em);
+  if(d.s) d.s = d.s.map(em);
+  if(d.f) d.f = d.f.map(([l,x])=>[em(l),x]);
+});
 
+let mode = 'ref', grp = ALL_CAT, cat = ALL_CAT, cur = null;
+
+const blk = (t,h,c='') => h ? `<div class="blk ${c}"><b>${t}</b>${h}</div>` : '';
 function cardHTML(d){
+  const meth = (d.math?`<div class="prob">${d.math}</div>`:'') + (d.f?d.f.map(fm).join(''):'') +
+    (d.steps?`<ol class="steps">${d.steps.map((s,i)=>`<li><span class="n">${i+1}</span><span class="st">${kbd(s)}</span></li>`).join('')}</ol>`:'');
   return `<article class="card" id="${d.id}">
     <button class="head" aria-expanded="false">
-      <div class="ico">${icoOf(d.ico)}</div>
-      <div class="ht"><b>${d.title}</b><span>${d.sub}</span></div>
+      <span class="ico">${icoOf(d.ico)}</span>
+      <span class="ht"><b>${d.title}</b><span>${d.sub}</span></span>
       ${ic('chev','chev')}
     </button>
     <div class="body"><div class="inner"><div class="pad">
-      ${d.math?`<div class="prob">${d.math}</div>`:''}
-      ${d.f?d.f.map(fm).join(''):''}
-      ${d.steps?`<ol class="steps">${d.steps.map((s,i)=>`<li><span class="n">${i+1}</span><span class="st">${kbd(s)}</span></li>`).join('')}</ol>`:''}
-      ${d.tip?`<div class="tip"><b>Mẹo:</b> ${d.tip}</div>`:''}
+      ${blk(d.grp==='Casio'?'Các bước bấm máy':'Công thức chuẩn',meth)}
+      ${blk('Bẫy hay sai',d.trap,'trap')}
+      ${blk('Mẹo giải nhanh',d.tip,'note')}
     </div></div></div>
   </article>`;
 }
 
+/* Xếp hàng các lần render công thức để không chạy chồng nhau */
 function typeset(el){
-  if(window.MathJax && MathJax.typesetPromise){ MathJax.typesetPromise(el?[el]:undefined).catch(()=>{}); }
-  else setTimeout(()=>typeset(el),300);
+  const M = window.MathJax;
+  if(M && M.typesetPromise && M.startup && M.startup.promise){
+    M.startup.promise = M.startup.promise.then(()=>M.typesetPromise([el||document.body])).catch(()=>{});
+  } else setTimeout(()=>typeset(el),300);
 }
 
-
-let cur = null;   /* bài đang hiển thị ở Tập bấm */
+/* ---- Tập bấm ---- */
 function pickQ(pool){
   if(!pool.length) return null;
   const c = pool.length>1 ? pool.filter(p=>p!==cur) : pool;   /* không lặp lại câu vừa ra */
@@ -582,14 +637,14 @@ function practiceHTML(pool){
   if(!cur || !pool.includes(cur)) cur = pickQ(pool);
   const p = cur;
   return `<section class="pr">
-    <div class="pbar"><div><small>Dạng bài</small><b>${cat===ALL_CAT?'Tất cả dạng':cat}</b></div><button class="ghost" data-act="menu">Đổi dạng</button></div>
-    <button class="rand" data-act="rand">${ic('dice')}Random bài</button>
+    <div class="pbar"><div><small>Luyện tập · dạng bài</small><b>${cat===ALL_CAT?'Tất cả dạng':esc(cat)}</b></div><div class="pb2"><button class="ghost" data-act="menu">Đổi dạng bài</button><button class="ghost" data-act="back">Về tra cứu</button></div></div>
+    <button class="rand" data-act="rand">${ic('dice')}Đổi câu hỏi</button>
     <div class="pcard">
-      <small>Đề bài · ${p.cat}</small>
+      <small>Câu hỏi · ${esc(p.cat)}</small>
       <div class="qt">${p.q}</div>
-      ${p.m?`<div class="tip" style="margin:0 0 14px"><b>Gợi ý bấm máy:</b> ${kbd(p.m)}</div>`:''}
-      <div class="acts"><button class="ghost" data-act="res">Hiện kết quả</button><button class="ghost" data-act="sol">Lời giải tự luận</button></div>
-      <div class="pa" hidden>Đáp số: \\(${p.a}\\)</div>
+      ${p.m?`<div class="tip" style="margin:0 0 12px"><b>Gợi ý bấm máy:</b> ${kbd(p.m)}</div>`:''}
+      <div class="acts"><button class="ghost" data-act="res">Xem đáp số</button><button class="ghost" data-act="sol">Xem lời giải</button></div>
+      <div class="pa" hidden>Đáp số: ${mix(p.a)}</div>
       <ol class="steps ps" hidden>${p.s.map((x,i)=>`<li><span class="n">${i+1}</span><span class="st">${x}</span></li>`).join('')}</ol>
     </div>
   </section>`;
@@ -597,52 +652,66 @@ function practiceHTML(pool){
 function act(b){
   const k = b.dataset.act;
   if(k==='menu') return setDrawer(true);
-  if(k==='rand'){ cur = pickQ(items('practice').filter(d=>cat===ALL_CAT||d.cat===cat)); return render(); }
+  if(k==='back') return go(ALL_CAT,ALL_CAT,'ref');
+  if(k==='rand'){ cur = pickQ(PRACTICE.filter(d=>cat===ALL_CAT||d.cat===cat)); return render(); }
   const el = list.querySelector(k==='res'?'.pa':'.ps'); el.hidden = !el.hidden;
-  b.textContent = k==='res' ? (el.hidden?'Hiện kết quả':'Ẩn kết quả') : (el.hidden?'Lời giải tự luận':'Ẩn lời giải');
+  b.textContent = k==='res' ? (el.hidden?'Xem đáp số':'Ẩn đáp số') : (el.hidden?'Xem lời giải':'Ẩn lời giải');
 }
 
+/* ---- Hiển thị ---- */
+function renderChips(){
+  chipsEl.hidden = mode==='practice';
+  chipsEl.innerHTML = [[ALL_CAT,'Tất cả'],...GRPS].map(([k,l])=>`<button class="chip" aria-pressed="${mode==='ref'&&grp===k}" data-g="${k}">${esc(l)}</button>`).join('');
+}
 function markDrawer(){
-  document.querySelectorAll('#dn .di[data-t]').forEach(b=>
-    b.classList.toggle('on', !q.value.trim() && b.dataset.t===tab && b.dataset.c===cat));
+  const none = q.value.trim();
+  document.querySelectorAll('#dn .di').forEach(b=>{
+    const on = !none && b.dataset.m===mode && b.dataset.c===cat && (mode==='practice' || b.dataset.g===grp);
+    b.classList.toggle('on',on);
+  });
 }
-
 function render(){
   const tokens = norm(q.value).split(/\s+/).filter(Boolean);
-  let pool;
-  if(tokens.length){ pool = [...DATA,...THEORY].filter(d=>tokens.every(t=>d.hay.includes(t))); }   /* tìm kiếm quét cả 2 tab */
-  else pool = items(tab).filter(d=>cat===ALL_CAT||d.cat===cat);
+  let pool, isP = false;
+  if(tokens.length) pool = REF.filter(d=>tokens.every(t=>d.hay.includes(t)));
+  else if(mode==='practice'){ isP = true; pool = PRACTICE.filter(d=>cat===ALL_CAT||d.cat===cat); }
+  else pool = REF.filter(d=>(grp===ALL_CAT||d.grp===grp)&&(cat===ALL_CAT||d.cat===cat));
   clearBtn.style.display = q.value ? 'grid' : 'none';
-  countEl.textContent = pool.length
-    ? (tokens.length ? `${pool.length} kết quả` : `${cat===ALL_CAT ? TN[tab] : cat} · ${pool.length} ${tab==='practice'?'bài':'mục'}`)
-    : '';
-  markDrawer();
-  list.innerHTML = (tab==='practice' && !tokens.length) ? practiceHTML(pool) : pool.length ? pool.map(cardHTML).join('') :
-    `<div class="empty"><big>${ic('search')}</big>Không tìm thấy kết quả.<br>Thử từ khóa ngắn hơn, ví dụ “tích phân” hoặc “đạo hàm”.</div>`;
-  typeset(list);
+  const g = GRPS.find(x=>x[0]===grp);
+  const label = isP ? 'Luyện tập' + (cat===ALL_CAT?'':' · '+esc(cat)) : cat!==ALL_CAT ? esc(cat) : (g?esc(g[1]):'Tất cả');
+  countEl.innerHTML = pool.length ? (tokens.length ? `${pool.length} kết quả` : `${label} · ${pool.length} ${isP?'bài':'mục'}`) : '';
+  list.innerHTML = isP ? practiceHTML(pool) : pool.length ? pool.map(cardHTML).join('') :
+    `<div class="empty"><big>${ic('search')}</big>Không tìm thấy kết quả.<br>Thử từ khóa ngắn hơn, ví dụ “tổ hợp” hoặc “đạo hàm”.</div>`;
+  renderChips(); markDrawer(); typeset(list);
+}
+function go(g,c,m){
+  mode = m||'ref'; grp = g||ALL_CAT; cat = c||ALL_CAT; q.value = '';
+  render(); window.scrollTo({top:0,behavior:'smooth'});
 }
 
-function go(t,c){
-  tab=t; cat=c||ALL_CAT; q.value='';
-  render();
-  window.scrollTo({top:0,behavior:'smooth'});
-}
-
+chipsEl.addEventListener('click',e=>{
+  const b = e.target.closest('.chip'); if(!b) return;
+  go(b.dataset.g,ALL_CAT,'ref');
+});
 list.addEventListener('click',e=>{
   const a = e.target.closest('[data-act]'); if(a){ act(a); return; }
   const h = e.target.closest('.head'); if(!h) return;
   const card = h.parentElement, open = !card.classList.contains('open');
   card.classList.toggle('open',open);
   h.setAttribute('aria-expanded',open);
-  if(open) setTimeout(()=>card.scrollIntoView({behavior:'smooth',block:'nearest'}),320);
+  if(open) setTimeout(()=>card.scrollIntoView({behavior:'smooth',block:'nearest'}),280);
 });
 let tm; q.addEventListener('input',()=>{clearTimeout(tm);tm=setTimeout(render,120)});
 clearBtn.addEventListener('click',()=>{q.value='';render();q.focus()});
 
-/* ===== [THÊM 2] Drawer ===== */
+/* ---- Mục lục ☰ ---- */
 function buildDrawer(){
-  const sec = (t,label) => `<h3>${ic(SECI[t])}${label}</h3>` + catsOf(t).map(c=>`<button class="di" data-t="${t}" data-c="${c}">${c===ALL_CAT?'Tất cả':c}${ic('chevR','go2')}</button>`).join('');
-  $('#dn').innerHTML = `<button class="di" data-s="1">${ic('search')}Tìm kiếm</button>` + sec('casio','Bấm máy Casio') + sec('theory','Lý thuyết') + sec('practice','Tập bấm');
+  const cats = a => [...new Set(a.map(d=>d.cat))];
+  const it = (m,g,c,l) => `<button class="di" data-m="${m}" data-g="${g}" data-c="${esc(c)}">${esc(l)}${ic('chevR','go2')}</button>`;
+  const sec = ([g,l]) => `<h3>${esc(l)}</h3>`+it('ref',g,ALL_CAT,'Tất cả')+cats(REF.filter(d=>d.grp===g)).map(c=>it('ref',g,c,c)).join('');
+  $('#dn').innerHTML = `<h2>Tra cứu công thức</h2>` + GRPS.slice(0,4).map(sec).join('')
+    + `<h2>Máy tính &amp; luyện tập</h2>` + sec(GRPS[4])
+    + `<h3>Luyện tập bấm máy</h3>` + it('practice',ALL_CAT,ALL_CAT,'Tất cả dạng bài') + cats(PRACTICE).map(c=>it('practice',ALL_CAT,c,c)).join('');
 }
 const setDrawer = o => { document.body.classList.toggle('dopen',o); document.body.classList.toggle('lock',o); };
 $('#burger').addEventListener('click',()=>setDrawer(true));
@@ -652,27 +721,8 @@ document.addEventListener('keydown',e=>{ if(e.key==='Escape') setDrawer(false); 
 $('#dn').addEventListener('click',e=>{
   const b = e.target.closest('.di'); if(!b) return;
   setDrawer(false);
-  if(b.dataset.s){ setTimeout(()=>q.focus(),300); return; }
-  go(b.dataset.t,b.dataset.c);
+  go(b.dataset.g,b.dataset.c,b.dataset.m);
 });
-
-/* ===== [THÊM 4] Splash: tự ẩn sau 3,2s hoặc khi bấm; chỉ hiện 1 lần/phiên ===== */
-(function(){
-  const sp = $('#splash');
-  let seen = false;
-  try{ seen = sessionStorage.getItem('cm580-splash')==='1'; }catch(e){}
-  if(seen){ sp.remove(); return; }
-  let done = false;
-  const close = () => {
-    if(done) return; done = true;
-    sp.classList.add('hide');
-    try{ sessionStorage.setItem('cm580-splash','1'); }catch(e){}
-    setTimeout(()=>sp.remove(),600);
-  };
-  $('#go').addEventListener('click',close);
-  sp.addEventListener('click',close);
-  setTimeout(close,3200);
-})();
 
 buildDrawer(); render();
 </script>
